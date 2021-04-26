@@ -433,20 +433,20 @@ p {
   width: 100%;
   display: none;
 }
-.carousel__inner .item.active {
+.carousel__inner > .item.active {
   display: block;
   left: 0;
 }
-.carousel__inner.left {
+.carousel__inner > .item.active.left {
   animation: move-left 0.2s cubic-bezier(0.54, 0.07, 0.95, 0.5);
 }
-.carousel__inner.leftNext {
+.carousel__inner > .item.active.leftNext {
   animation: move-left-next 0.2s linear;
 }
-.carousel__inner.right {
+.carousel__inner > .item.active.right {
   animation: move-right 0.2s cubic-bezier(0.54, 0.07, 0.95, 0.5);
 }
-.carousel__inner.rightNext {
+.carousel__inner > .item.active.rightNext {
   animation: move-right-next 0.2s linear;
 }
 
@@ -519,6 +519,195 @@ p {
 .testimonial__author > span {
   line-height: 1.2;
   font-weight: 700;
+}
+
+.news {
+  padding: 97px 0;
+  max-width: 1155px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.news__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 2.25em;
+  line-height: 31px;
+  font-weight: 500;
+  color: #f44336;
+}
+
+.latest-news {
+  width: 50%;
+  padding-right: 90px;
+}
+.latest-news__title {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.latest-news__item {
+  display: flex;
+}
+.latest-news__item:last-child .latest-news__date {
+  margin-bottom: 0;
+}
+.latest-news__date {
+  margin: 0 65px 50px 20px;
+  width: 98px;
+  height: 139px;
+  border: 1px solid #e8e8e8;
+  border-radius: 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.latest-news__date > h1 {
+  font-weight: 500;
+}
+.latest-news__date > h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #9e9e9e;
+  font-size: 0.8em;
+}
+.latest-news__date > h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #9e9e9e;
+  font-size: 0.81em;
+}
+.latest-news__h4 {
+  font-weight: 700;
+  color: #f44336;
+  margin: 23px 0;
+}
+.latest-news__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #9e9e9e;
+}
+
+.news-carousel {
+  width: 50%;
+}
+.news-carousel__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.news-carousel__inner > .item {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.news-carousel__inner > .item.active {
+  display: block;
+  left: 0;
+}
+.news-carousel__inner > .item.active.left {
+  animation: move-left 0.2s cubic-bezier(0.54, 0.07, 0.95, 0.5);
+}
+.news-carousel__inner > .item.active.leftNext {
+  animation: move-left-next 0.2s linear;
+}
+.news-carousel__inner > .item.active.right {
+  animation: move-right 0.2s cubic-bezier(0.54, 0.07, 0.95, 0.5);
+}
+.news-carousel__inner > .item.active.rightNext {
+  animation: move-right-next 0.2s linear;
+}
+
+.featured-events {
+  height: 100%;
+  width: 100%;
+}
+.featured-events__title {
+  font-weight: 500;
+  color: #000;
+  width: 100%;
+  border-bottom: 1px solid #c5c5c5;
+  padding-bottom: 15px;
+  line-height: 20px;
+}
+.featured-events__images {
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.featured-events__image {
+  width: 33.33%;
+  height: 120px;
+  background-color: #c5c5c5;
+  overflow: hidden;
+}
+.featured-events__arrow-left, .featured-events__arrow-right {
+  font-size: 34px;
+  font-weight: 500;
+  color: #000000;
+  position: absolute;
+  top: -10px;
+  z-index: 10;
+}
+.featured-events__arrow-left:hover, .featured-events__arrow-right:hover {
+  cursor: pointer;
+}
+.featured-events__arrow-left {
+  right: 30px;
+}
+.featured-events__arrow-right {
+  right: 0;
+}
+
+.accordion__block > h4 {
+  padding: 14px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.accordion__block > h4:hover {
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.accordion__block > h4:before {
+  content: "+";
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-right: 10px;
+}
+.accordion__block > p {
+  display: none;
+  padding: 30px 13px 40px 23px;
+  background-color: rgba(0, 0, 0, 0.03);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #505050;
+}
+.accordion__block.active {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+.accordion__block.active > p {
+  display: block;
+}
+.accordion__block.active > h4 {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.accordion__block.active > h4:before {
+  content: "-";
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */
