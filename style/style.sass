@@ -318,7 +318,7 @@ p
     grid-gap: 30px
 
 
-.product
+.item
   text-align: center
   transition: all .1s linear
   padding-bottom: 13px
@@ -378,7 +378,7 @@ p
   height: 100%
   position: relative
   overflow: hidden
-  & > .item
+  & > .slide
     position: absolute
     top: 0
 
@@ -532,7 +532,7 @@ p
     height: 100%
     position: relative
     overflow: hidden
-    & > .item
+    & > .slide
       position: absolute
       top: 0
 
@@ -865,6 +865,8 @@ p
   padding: 90px 0 90px
   margin: 0 auto
   text-align: center
+  &.not-home
+    max-width: 975px
   &__title
     font-size: 2.25em
     font-weight: 600
@@ -908,7 +910,113 @@ p
   right: 55px
   &:hover
     cursor: pointer
-  
+
+
+.product
+  padding: 175px 0
+  display: flex
+  &__images
+    width: 50%
+    display: flex
+    flex-direction: column
+    &-variants
+      display: flex
+      align-items: flex-end
+      padding: 40px 15px 0 20px
+      & > div:last-of-type
+        margin-right: 0
+    &-small
+      display: flex
+      justify-content: center
+      align-items: center
+
+      width: 85px
+      height: 62px
+      margin-right: 20px
+
+      background-color: #c2c2c2
+      overflow: hidden
+      &.current
+        width: 120px
+        height: 88px
+
+        align-items: flex-start
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,0.6)
+      &:hover
+        cursor: pointer
+        transform: translateY(-4px)
+    &-big
+      display: flex
+      justify-content: center
+      align-items: center
+
+      overflow: hidden
+  &__desc
+    width: 50%
+    padding: 0 20px
+    & > button
+      width: 100%
+      padding: 15px
+
+      font-size: 30px
+      font-weight: 500
+      letter-spacing: 0.01em
+      color: #ffffff
+      line-height: 28px
+  &__name
+    font-size: 2.25em
+    font-weight: 500
+    color: #000000
+    line-height: 35px
+
+    text-align: center
+    padding: 0 10%
+    margin-bottom: 15px
+    & > span
+      color: #f44336
+  &__price
+    font-size: 3.8em
+    font-weight: 400
+    color: #000000
+    text-align: center
+    margin-bottom: 15px
+    line-height: 64px
+  &__text
+    margin-top: 40px
+
+    line-height: 24px
+    font-weight: 300
+    letter-spacing: 0.01em
+    color: #999
+
+
+.similar
+  position: relative
+
+  padding: 50px 0
+
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  &-bg
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    opacity: 0.07
+    background-color: #000000
+  & > article
+    margin-right: 30px
+    max-width: 270px
+    background-color: rgba(0, 0, 0, 0)
+    &:last-of-type
+      margin-right: 0
+  &__title
+    width: 100%
+    margin-bottom: 80px
+    text-align: center
+
 
 
 
