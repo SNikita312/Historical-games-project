@@ -526,6 +526,7 @@ p
 
 .news-carousel
   width: 50%
+  position: relative
   //min-height: 550px
   &__inner
     width: 100%
@@ -946,11 +947,14 @@ p
         cursor: pointer
         transform: translateY(-4px)
     &-big
-      display: flex
-      justify-content: center
-      align-items: center
+      height: 300px
+      position: relative
 
       overflow: hidden
+      & > img
+        position: absolute
+        top: 0
+        left: 0
   &__desc
     width: 50%
     padding: 0 20px

@@ -622,6 +622,7 @@ p {
 
 .news-carousel {
   width: 50%;
+  position: relative;
 }
 .news-carousel__inner {
   width: 100%;
@@ -1077,10 +1078,14 @@ p {
   transform: translateY(-4px);
 }
 .product__images-big {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 300px;
+  position: relative;
   overflow: hidden;
+}
+.product__images-big > img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .product__desc {
   width: 50%;
