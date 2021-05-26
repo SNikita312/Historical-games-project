@@ -1,7 +1,4 @@
 const  movedItem =  document.querySelectorAll('.moved-item');
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
 function topAnimate() {
     if (pageYOffset > 1) {
         document.querySelector('.header').classList.add('header-fixed');
@@ -46,3 +43,4 @@ function animateOnScroll() {
         itemAnimate();
     }
 }
+animateOnScroll();
